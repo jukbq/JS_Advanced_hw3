@@ -119,12 +119,6 @@ function addToInput(value) {
     calcString = control(calcString);
     document.getElementById("res").value = calcString;
 }
-/* 
-function pow(value) {
-    let pow = ''
-    pow = value;
-    document.getElementById("res").value = pow ;
-} */
 
 function clean() {
     calcString = "";
