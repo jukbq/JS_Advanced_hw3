@@ -57,6 +57,7 @@ section .calcul .display_box .display {
   font-size: 50px;
   color: #f6fafb;
   text-align: right;
+  z-index: 0;
 }
 
 section .calcul .buttom_box {
@@ -99,10 +100,6 @@ section .calcul .buttom_box .numbers .btn {
 section .calcul .buttom_box .numbers :active {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-section .calcul .buttom_box .numbers .zero {
-  width: 160px;
 }
 
 section .calcul .buttom_box .math_func {

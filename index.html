@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,
-                        initial-scale=1.0">
+            initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>calculator</title>
@@ -15,7 +15,7 @@
     <section>
         <div class="container my-4 calcul">
             <div class="display_box">
-                <input type="text" class="display" value="0">
+                <input type="text" id="res" disabled="disabled" class="display" value="0">
             </div>
             <div class="buttom_box">
                 <table class="table table-bordered numbers">
@@ -23,87 +23,90 @@
                     <body>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-light">7</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="7">7</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">8</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="8">8</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">9</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="9">9</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn  btn-light">4</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="4">4</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">5</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="5">5</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">6</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="6">6</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn  btn-light">3</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="3">3</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">2</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="2">2</button>
                             </td>
                             <td>
-                                <button type="button" class="btn  btn-light">1</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value="1">1</button>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
-                                <button type="button" class="btn  btn-light zero">0</button>
+                            <td>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light  num" value="0">0</button>
                             </td>
 
                             <td>
-                                <button type="button" class="btn  btn-light">.</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-light num" value=".">.</button>
+                            </td>
+                            <td>
+                                <button type="button" onclick="del()" class="btn btn-secondary">&#8592</button>
                             </td>
                         </tr>
 
                     </body>
                 </table>
-
-
                 <!----------------------------------------------------------------->
                 <table class="table table-bordered math_func">
 
                     <body>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-secondary">(</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value="(">(</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-secondary">)</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value=")">)</button>
                             </td>
+
                         </tr>
 
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-secondary">+</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value="+">+</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-secondary">-</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value="-">-</button>
                             </td>
 
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-secondary">&#215</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value="*">&#215</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-secondary">&#247</button>
+                                <button type="button" onclick="addToInput(this.value)" class="btn btn-secondary num" value="/">&#247</button>
                             </td>
+
                         </tr>
                         <tr>
                             <td>
-                                <button type="button" class="btn btn-secondary">&#8592</button>
+                                <button type="button" onclick="clean()" class="btn btn-secondary">AC</button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-success">=</button>
+                                <button type="button" onclick="kalk()" class="btn btn-success equals">=</button>
                             </td>
                         </tr>
                     </body>
